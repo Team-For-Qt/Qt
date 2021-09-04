@@ -6,8 +6,8 @@ Zombie::Zombie()
 }
 void Zombie::setMovie(QString path)
 {
-    if (movie)
-        delete movie;
+//    if (movie)
+//        delete movie;
     movie = new QMovie(path);
     movie->start();
 }
@@ -20,9 +20,11 @@ void Zombie::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
 {
     Q_UNUSED(option)
     Q_UNUSED(widget)
+    movie->setSpeed(50);
+    painter->drawImage(QRectF(-70, -100, 140, 140), movie->currentImage());
 
-    QImage image = movie->currentImage();
-    movie->setSpeed(200);
-    painter->drawImage(QRectF(-70, -100, 140, 140), image);
-
+}
+int Zombie::type() const
+{
+    return Type;
 }

@@ -31,12 +31,22 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     zombie.cpp \
-    zombie_basic.cpp
+    zombie_basic.cpp \
+    plant.cpp \
+    plant_pea.cpp \
+    weapon.cpp \
+    weapon_pea.cpp \
+    weapon_peasnow.cpp
 
 HEADERS += \
         mainwindow.h \
     zombie.h \
-    zombie_basic.h
+    zombie_basic.h \
+    plant.h \
+    plant_pea.h \
+    weapon.h \
+    weapon_pea.h \
+    weapon_peasnow.h
 
 FORMS += \
         mainwindow.ui
