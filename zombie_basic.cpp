@@ -3,9 +3,9 @@
 Zombie_Basic::Zombie_Basic()
 {
     condition = 1;
-    bv = 100;
-    ht = 80;
-    speed = 5;
+    bv = 500;
+    ht = 200;
+    speed = 3;
     if (qrand() % 2)
         setMovie(":/image/images/ZombieWalk1.gif");
     else

@@ -7,11 +7,13 @@
 #include <QMovie>
 
 
+
 class Plant : public QGraphicsItem
 {
 public:
     Plant();
-    QRectF boundingRect()  const override;
+    QRectF boundingRect() const  override;
+    enum { Type = UserType + 2};
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
     void setMovie(QString path);
     int type() const override;

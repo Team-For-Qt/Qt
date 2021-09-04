@@ -26,8 +26,7 @@ void Weapon::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
 bool Weapon::collidesWithItem(const QGraphicsItem *other, Qt::ItemSelectionMode mode) const
 {
     Q_UNUSED(mode);
-    //qDebug()<<"12333";
-    return other->type() == Zombie::Type && qFuzzyCompare(other->y(), y()) && qAbs(other->x() - x()) < 15;
+    return other->type() == Zombie::Type && qFuzzyCompare(other->y(), y()) && qAbs(other->x() - x()) < 30;
 }
 
 void Weapon::advance(int phase)
@@ -46,6 +45,6 @@ void Weapon::advance(int phase)
         return;
     }
     setX(x() + speed);
-    if (x() > 1069)
+    if (x() > 1200)
         delete this;
 }

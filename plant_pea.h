@@ -12,7 +12,7 @@ class Plant_Pea : public Plant
 {
 public:
     Plant_Pea();
-    void advance(int phase)override;
+    void advance(int phase)override;    
     bool collidesWithItem(const QGraphicsItem *other, Qt::ItemSelectionMode mode) const override;
 };
 

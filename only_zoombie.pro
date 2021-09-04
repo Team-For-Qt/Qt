@@ -39,7 +39,21 @@ SOURCES += \
     weapon_pea.cpp \
     weapon_peasnow.cpp \
     messy.cpp \
-    whacker.cpp
+    whacker.cpp \
+    plant_chomper.cpp \
+    plant_shield.cpp \
+    box.cpp \
+    lawn.cpp \
+    box_chomper.cpp \
+    box_peashooter.cpp \
+    plant_groundattack.cpp \
+    box_grounattack.cpp \
+    box_sunflower.cpp \
+    box_shield.cpp \
+    box_cherrybomb.cpp \
+    box_snowpea.cpp \
+    sun_num.cpp \
+    plant_peasnow.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -51,7 +65,21 @@ HEADERS += \
     weapon_pea.h \
     weapon_peasnow.h \
     messy.h \
-    whacker.h
+    whacker.h \
+    plant_chomper.h \
+    plant_shield.h \
+    box.h \
+    lawn.h \
+    box_chomper.h \
+    box_peashooter.h \
+    plant_groundattack.h \
+    box_grounattack.h \
+    box_sunflower.h \
+    box_shield.h \
+    box_cherrybomb.h \
+    box_snowpea.h \
+    sun_num.h \
+    plant_peasnow.h
 
 FORMS += \
         mainwindow.ui

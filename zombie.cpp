@@ -30,8 +30,37 @@ void Zombie::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
 {
     Q_UNUSED(option)
     Q_UNUSED(widget)
-    movie->setSpeed(50);
-    painter->drawImage(QRectF(-70, -100, 140, 140), movie->currentImage());
+    QImage image = movie->currentImage();
+    if (speed < 0.55 && condition != 4)
+    {
+        if (condition != 0)
+            movie->setSpeed(50);
+        int w = image.width();
+        int h = image.height();
+        for (int i = 0; i < h; ++i)
+        {
+            uchar *line = image.scanLine(i);
+            for (int j = 5; j < w - 5; ++j)
+                line[j << 2] = 200;
+        }
+    }
+    painter->drawImage(QRectF(-70, -100, 140, 140), image);
+    if (head)
+    {
+        image = head->currentImage();
+        if (speed < 0.55)
+        {
+            int w = image.width();
+            int h = image.height();
+            for (int i = 0; i < h; ++i)
+            {
+                uchar *line = image.scanLine(i);
+                for (int j = 5; j < w - 5; ++j)
+                    line[j << 2] = 200;
+            }
+        }
+        painter->drawImage(QRectF(0, -100, 140, 140), image);
+    }
 
 }
 int Zombie::type() const
@@ -42,5 +71,7 @@ int Zombie::type() const
 bool Zombie::collidesWithItem(const QGraphicsItem *other, Qt::ItemSelectionMode mode) const
 {
     Q_UNUSED(mode)
+//    if(other->type() == Plant_GroundAttack::Type)
+//        return false;
     return other->type()==Plant::Type && qFuzzyCompare(other->y(),y()) && qAbs(x()-other->x())<15;
 }
