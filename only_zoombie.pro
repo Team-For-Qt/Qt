@@ -4,9 +4,10 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui multimedia
 
-QT += gui
+CONFIG += resources_big
+
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -36,7 +37,9 @@ SOURCES += \
     plant_pea.cpp \
     weapon.cpp \
     weapon_pea.cpp \
-    weapon_peasnow.cpp
+    weapon_peasnow.cpp \
+    messy.cpp \
+    whacker.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -46,7 +49,9 @@ HEADERS += \
     plant_pea.h \
     weapon.h \
     weapon_pea.h \
-    weapon_peasnow.h
+    weapon_peasnow.h \
+    messy.h \
+    whacker.h
 
 FORMS += \
         mainwindow.ui

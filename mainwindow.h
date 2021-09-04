@@ -5,7 +5,7 @@
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <QTimer>
-
+#include <QSound>
 
 namespace Ui {
 class MainWindow;
@@ -27,6 +27,7 @@ private:
     QGraphicsScene *scene ;
     QGraphicsView *view;
     QTimer *timer;
+    QSound *sound;
 };
 
 #endif // MAINWINDOW_H

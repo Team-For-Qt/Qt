@@ -14,9 +14,12 @@ public:
     QRectF boundingRect()  const override;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
     void setMovie(QString path);
+    int type() const override;
+    int bv;//血量
+
 protected:
     QMovie *movie;
-    int bv;//血量
+
     int ht;//伤害
     int time;
     int cnt;

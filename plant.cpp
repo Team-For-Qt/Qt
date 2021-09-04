@@ -24,3 +24,9 @@ void Plant::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWi
     Q_UNUSED(widget)
     painter->drawImage(boundingRect(), movie->currentImage());
 }
+
+
+int Plant::type() const
+{
+    return Type;
+}
